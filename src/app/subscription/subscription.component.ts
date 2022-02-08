@@ -15,7 +15,6 @@ export class SubscriptionComponent implements OnInit {
   public email: string = "";
   public motDePasse: string = "";
 
-  private readonly GET_BLOGS = environment.apiUrl + 'Blog/getBlogs/';
   private readonly POST_SUBSCRIBE = environment.apiUrl + 'User/subscribe'
 
   constructor(private http: HttpClient) { }

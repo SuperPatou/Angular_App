@@ -6,9 +6,22 @@
 <app-article-form></app-article-form>
 <br> 
 
+
+<a [routerLink]="['./blog']">Modifier un blog?</a>
+
+ 
 <div>
     <a [routerLink]="['./subscribe']">Inscription</a>
 </div>
+
+<div>
+    <a [routerLink]="['./login']">Se connecter</a>
+</div>
+
+<div>
+    <a (click)="logout()">Se deconnecter</a>
+</div>
+
 <router-outlet>
 
 </router-outlet>
