@@ -12,6 +12,7 @@ export class SubscriptionComponent implements OnInit {
 
   public nom: string = "";
   public prenom: string = "";
+  public email: string = "";
   public motDePasse: string = "";
 
   private readonly GET_BLOGS = environment.apiUrl + 'Blog/getBlogs/';
@@ -27,7 +28,8 @@ export class SubscriptionComponent implements OnInit {
       this.POST_SUBSCRIBE,{
         user: new User(
           this.nom,
-          this.prenom
+          this.prenom,
+          this.email
         ), Password: this.motDePasse
       }
     ).subscribe()
