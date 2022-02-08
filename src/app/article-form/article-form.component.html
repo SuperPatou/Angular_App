@@ -1,0 +1,23 @@
+<p>Créer un Article?</p>
+<form (ngSubmit)="submitArticle()">
+    <div>
+        <label for="">Titre</label>
+        <input name="titre" [(ngModel)]="titre" type="text">
+    </div>
+
+    <div>
+        <label for="">Auteur</label>
+        <input name="auteur" [(ngModel)]="auteur" type="text">
+    </div>
+
+    <div>
+        <label for="">Texte</label>
+        <textarea  name="texte" [(ngModel)]="texte"></textarea>
+    </div>
+
+    <select name="selectedBlog" [(ngModel)]="selectedBlog" name="blog">
+        <option *ngFor="let blog of allBlogs" [ngValue]="blog">{{blog.titre}}</option>
+    </select>
+
+    <button type="submit">Sauvegarder le blog</button>
+</form>

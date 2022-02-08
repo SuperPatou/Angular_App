@@ -1,0 +1,23 @@
+<p>Créer un blog?</p>
+<form (ngSubmit)="submitBlog()">
+    <div>
+        <input name="id" [(ngModel)]="id" type="hidden">
+    </div>
+
+    <div>
+        <label for="">Titre</label>
+        <input name="titre" [(ngModel)]="titre" type="text">
+    </div>
+
+    <div>
+        <label for="">Sous titre</label>
+        <input name="sousTitre" [(ngModel)]="sousTitre" type="text">
+    </div>
+
+    <div>
+        <label for="">Catégorie</label>
+        <input name="categorie" [(ngModel)]="categorie" type="text">
+    </div>
+
+    <button type="submit">Sauvegarder le blog</button>
+</form>
