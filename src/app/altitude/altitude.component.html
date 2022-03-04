@@ -1,0 +1,17 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Altitudes</th>
+            <th>DisplayText</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let Altitude of allAltitude">
+            <td>{{Altitude.time}}</td>
+            <td>{{Altitude.altitude}}</td>
+            <td>{{Altitude.displayText}}</td>
+        </tr>
+    </tbody>
+</table>

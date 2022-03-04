@@ -1,23 +1,26 @@
-<p>Créer un Article?</p>
 <form (ngSubmit)="submitArticle()">
-    <div>
-        <label for="">Titre</label>
-        <input name="titre" [(ngModel)]="titre" type="text">
+    <legend>Créer un Article?</legend>
+    <div class="mb-3">
+        <label class="form-label" for="">Titre</label>
+        <input class="form-control" name="titre" [(ngModel)]="titre" type="text">
     </div>
 
-    <div>
-        <label for="">Auteur</label>
-        <input name="auteur" [(ngModel)]="auteur" type="text">
+    <div class="mb-3">
+        <label class="form-label" for="">Auteur</label>
+        <input class="form-control" name="auteur" [(ngModel)]="auteur" type="text">
     </div>
 
-    <div>
-        <label for="">Texte</label>
-        <textarea  name="texte" [(ngModel)]="texte"></textarea>
+    <div class="mb-3">
+        <label class="form-label" for="">Texte</label>
+        <textarea class="form-control" name="texte" [(ngModel)]="texte"></textarea>
     </div>
 
-    <select name="selectedBlog" [(ngModel)]="selectedBlog" name="blog">
-        <option *ngFor="let blog of allBlogs" [ngValue]="blog">{{blog.titre}}</option>
-    </select>
-
-    <button type="submit">Sauvegarder le blog</button>
+    <div class="mb-3">
+        <label for="selectedBlog" class="form-label">Selectionner un blog:</label>
+        <select class="form-select" name="selectedBlog" [(ngModel)]="selectedBlog" name="blog">
+            <option *ngFor="let blog of allBlogs" [ngValue]="blog">{{blog.titre}}</option>
+        </select>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Sauvegarder l'article</button>
 </form>

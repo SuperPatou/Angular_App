@@ -1,29 +1,32 @@
-
-<p>Editer un blog?</p>
-
 <form (ngSubmit)="submitBlog()">
+    <legend>Editer un blog?</legend>
+
     <div>
         <input name="id" [(ngModel)]="id" type="hidden">
     </div>
 
-    <select name="selectedBlog" [(ngModel)]="selectedBlog" (change)="onChangeBlog()" name="blog">
-        <option *ngFor="let blog of allBlogs" [ngValue]="blog">{{blog.titre}}</option>
-    </select>
-    
-    <div>
-        <label for="">Titre</label>
-        <input name="titre" [(ngModel)]="titre" type="text">
+    <div class="mb-3">
+        <label for="selectedBlog" class="form-label">Selectionner un blog:</label>
+
+        <select name="selectedBlog" class="form-select" aria-label="Choisir un blog" [(ngModel)]="selectedBlog" (change)="onChangeBlog()" name="blog">
+            <option *ngFor="let blog of allBlogs" [ngValue]="blog">{{blog.titre}}</option>
+        </select>
     </div>
 
-    <div>
-        <label for="">Sous titre</label>
-        <input name="sousTitre" [(ngModel)]="sousTitre" type="text">
+    <div class="mb-3">
+        <label for="" class="form-label">Titre</label>
+        <input name="titre" [(ngModel)]="titre" class="form-control" type="text">
     </div>
 
-    <div>
-        <label for="">Catégorie</label>
-        <input name="categorie" [(ngModel)]="categorie" type="text">
+    <div class="mb-3">
+        <label for="" class="form-label">Sous titre</label>
+        <input name="sousTitre" [(ngModel)]="sousTitre" class="form-control" type="text">
     </div>
 
-    <button [disabled]="submitState ? true : null" type="submit">Modifier le blog</button>
+    <div class="mb-3">
+        <label for="" class="form-label">Catégorie</label>
+        <input name="categorie" [(ngModel)]="categorie" class="form-control" type="text">
+    </div>
+
+    <button class="btn btn-primary" [disabled]="submitState ? true : null" type="submit">Modifier le blog</button>
 </form>

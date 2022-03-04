@@ -12,6 +12,7 @@ import { BlogEditFormComponent } from './blog-edit-form/blog-edit-form.component
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { LoginComponent } from './login/login.component';
 import { TokenInterceptor } from './core/token.interceptor';
+import { AltitudeComponent } from './altitude/altitude.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TokenInterceptor } from './core/token.interceptor';
     ArticleFormComponent,
     BlogEditFormComponent,
     SubscriptionComponent,
-    LoginComponent
+    LoginComponent,
+    AltitudeComponent
   ],
   imports: [
     BrowserModule,

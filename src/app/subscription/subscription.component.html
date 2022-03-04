@@ -1,25 +1,25 @@
-<p>Inscription</p>
-
 <form (submit)="onSubmit()">
-    <div>
-        <label>Nom de famille</label>
-        <input [(ngModel)]='nom' name = "nom"/>
-    </div>
+    <legend>Inscription</legend>
 
     <div>
-        <label>Prénom</label>
-        <input [(ngModel)]='prenom' name = "prenom"/>
-    </div>
-    
-    <div>
-        <label>Email</label>
-        <input [(ngModel)]='email' name = "email"/>
+        <label class="form-label">Nom de famille</label>
+        <input [(ngModel)]='nom' class="form-control" name = "nom"/>
     </div>
 
-    <div>
-        <label>Mot de passe</label>
-        <input [(ngModel)]='motDePasse' type="password" name = "motDePasse"/>
+    <div class="mb-3">
+        <label  class="form-label">Prénom</label>
+        <input [(ngModel)]='prenom' class="form-control" name = "prenom"/>
     </div>
     
-    <button type="submit">S'inscrire</button>
+    <div class="mb-3">
+        <label  class="form-label">Email</label>
+        <input [(ngModel)]='email' class="form-control" name = "email"/>
+    </div>
+
+    <div class="mb-3">
+        <label  class="form-label">Mot de passe</label>
+        <input [(ngModel)]='motDePasse' class="form-control" type="password" name = "motDePasse"/>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">S'inscrire</button>
 </form>

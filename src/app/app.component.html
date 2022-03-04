@@ -1,27 +1,26 @@
+<div class="container">
 
-<app-blog-form></app-blog-form>
-<br>
-<app-blog-edit-form></app-blog-edit-form>
-<br> 
-<app-article-form></app-article-form>
-<br> 
+    <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
+        <a class="nav-link" [routerLink]="['./blog']">Modifier un blog?</a>
+        <a class="nav-link" [routerLink]="['./subscribe']">S'inscrire</a>
+        <a class="nav-link" [routerLink]="['./login']">Se connecter</a>
+        <a class="nav-link" [routerLink]="['./altitude']">InfluxDB</a>
+        <a class="nav-link" (click)="logout()">Se deconnecter</a>
+    </nav>
 
+    <div class="row">
+        <router-outlet>
 
-<a [routerLink]="['./blog']">Modifier un blog?</a>
+        </router-outlet>
+    </div>
+    
 
- 
-<div>
-    <a [routerLink]="['./subscribe']">Inscription</a>
+    <div class="row">
+        <div class="col-6">
+            <app-blog-form></app-blog-form>
+        </div>
+        <div class="col-6">
+            <app-article-form></app-article-form>
+        </div>
+    </div>
 </div>
-
-<div>
-    <a [routerLink]="['./login']">Se connecter</a>
-</div>
-
-<div>
-    <a (click)="logout()">Se deconnecter</a>
-</div>
-
-<router-outlet>
-
-</router-outlet>
